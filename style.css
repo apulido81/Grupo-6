@@ -1,7 +1,7 @@
-/* *{
+*{
     margin:0;
     box-sizing: border-box;
-} */
+}
 
 .header{
     background-color: #6200EE;
@@ -21,7 +21,10 @@
 }
 
 body{
-    padding: 10% 40px 0;
+    padding: 80px 15% 20px ;
+
+    /* width: 10%; */
+    scroll-behavior: auto;
 }
 
 .nav{
@@ -47,3 +50,4 @@ body{
 #footer h3 {
     color:white;
 }
+
