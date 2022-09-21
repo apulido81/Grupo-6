@@ -11,4 +11,24 @@
 #TextoPrincipal h1 {
     color:#6200EE;
     font-family:'Noto Sans JP';
+    text-align: center;
+
+}
+.mb-3 label{
+    color:#6200EE;
+    font-family:'Noto Sans JP';
+}
+.mb-2 label{
+    color:#6200EE;
+    font-family:'Noto Sans JP';
+}
+
+#btnIngresar button{
+    background-color:#6200EE;
+    color:white;
+}
+
+#btnRecordar button{
+    background-color:#6200EE;
+    color:white;
 }
