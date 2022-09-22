@@ -9,17 +9,37 @@
           </form>
         </div>
     </nav>
-    <div>
+</head>  
+<br><br>  
+
+<body> 
     <style>
+ 
         .header {
             text-align: center;
-            height: 230px;
+            width: 80%;
+            height: 17rem;
             padding:12px;
             background-image: url("https://convertingcolors.com/color-palette-image/view/6200EE7018EE7E30EE8C47EE9A5FEEA877EEB68FEEC4A7EED2BEEEE0D6EE.png");
+            border-radius: 0 0 20px 20px;
+            justify-content: center ;
+            margin-left: 90px;
+            text-align: center;
         }
         .avatar {
-            font: 150px;
-            height: 150px; 
+            display: flex;
+            width: 180px;
+            height: 180px;
+            align-items: center;
+            justify-content: center;
+            border: 7px solid #FFFFFF;
+            background-color: #DFE5F2;
+            border-radius: 50%;
+            box-shadow: 0 0 12px rgba(0, 0, 0, .2);
+            position: relative;
+            bottom: -40px;
+            left: calc(50% - 90px);
+            z-index: 1; 
         }
         .user-name {
             font-size: 20px;
@@ -57,22 +77,89 @@
             color: #545454;
             font-size: 18px;
         }
-        </style>
-        </div>
-</head>
+        .seccion-perfil-usuario .perfil-usuario-bio{
+            display: block;
+            flex-wrap: wrap;
+            padding: 1.5rem 1.5rem;
+            box-shadow: 0 0 12px rgba(0, 0, 0, .3);
+            background-color: #fff;
+            border-radius: 15px;
+            width: 80%;
+            margin: 70px;
+            text-align: center;
+}
+            .seccion-perfil-usuario .perfil-usuario-footer,
+            .seccion-perfil-usuario .perfil-usuario-bio {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 1.5rem 2rem;
+            box-shadow: 0 0 12px rgba(0, 0, 0, .2);
+            background-color: #fff;
+            border-radius: 15px;
+            width: 70%;
+            text-align: center;
+            margin: 70px    ;
+}
+            .seccion-perfil-usuario .lista-datos {
+            width: 50%;
+            list-style: none;
+}
+            .seccion-perfil-usuario .lista-datos li {
+            padding: 5px 0;
+            text-align: center;
+}
 
-<body>            
-                </li>
-            </ul>
-            <div class="header">
-                <img 
-                class="avatar"
+            .seccion-perfil-usuario .lista-datos li>.icono {
+    margin-right: 1rem;
+    font-size: 1.2rem;
+    vertical-align: middle;
+}
+            .seccion-perfil-usuario .perfil-usuario-body {
+            width: 100%;
+            position: center;
+            max-width: 2000px;
+            margin-left: 100px;
+            text-align: center;
+}
+        </style>
+       
+        <section  class="seccion-perfil-usuario" >
+                <div class="header">
+                <img class="avatar"
                 src="https://cdn-icons-png.flaticon.com/512/91/91528.png"height = "150">
-                <h1 class="user-name">NOMBRE DE USUARIO</h1>
+
             </div>
-        </nav>
-    <ul class="socials">
+            <div class="perfil-usuario-body">
+                <div class="perfil-usuario-bio">
+                    <h3 class="titulo">Nombre de usuario</h3>
+                    <p class="texto">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+
+                <div class="perfil-usuario-footer">
+                    <ul class="lista-datos">
+                        <li><i class="icono fas fa-map-signs"></i> Direccion de usuario:</li>
+                        <li><i class="icono fas fa-phone-alt"></i> Telefono:</li>
+                        <li><i class="icono fas fa-briefcase"></i> Trabaja en.</li>
+                        <li><i class="icono fas fa-building"></i> Cargo</li>
+                    </ul>
+                    <ul class="lista-datos">
+                        <li><i class="icono fas fa-map-marker-alt"></i> Ubicacion.</li>
+                        <li><i class="icono fas fa-calendar-alt"></i> Fecha nacimiento.</li>
+                        <li><i class="icono fas fa-user-check"></i> Registro.</li>
+                        <li><i class="icono fas fa-share-alt"></i> Redes sociales.</li>
+                    </ul>
+                </div>
+                <div class="redes-sociales">
+                    <a href="" class="boton-redes facebook fab fa-facebook-f"><i class="icon-facebook"></i></a>
+                    <a href="" class="boton-redes twitter fab fa-twitter"><i class="icon-twitter"></i></a>
+                    <a href="" class="boton-redes instagram fab fa-instagram"><i class="icon-instagram"></i></a>
+                </div>
+            </div>
+         <ul class="socials">
+          
         <li>
+            
             <i class="icon email"></i>
             <a href="mailto:usuario@gmail.com">usuario@gmail.com</a>
         </li>
@@ -82,12 +169,9 @@
         </li>
     </ul>
     <div class="about">
-<h3>Acerca de</h3>
-
     </div>
+</section>
     
-    <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Lorem, ipsum dolor sit amet consectetur adipisicing elit optio placeat dolorum blanditiis repudiandae error?
-    </p>
+    
 </body> 
 </html>
