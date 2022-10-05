@@ -2,7 +2,8 @@
 <html lang="en">
 <head class="header">
     
-    <link rel="stylesheet" href="{{ url_for('static',filename='styles/logo.css') }}">
+    <!-- <link rel="stylesheet" href="{{ url_for('static',filename='styles/logo.css') }}"> -->
+    <link rel="stylesheet" href="../static/styles/logo.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 </head>  
 <body> 
@@ -10,7 +11,7 @@
         <div class="container-fluid">
           <a class="navbar-brand">Social Pogona Henrylawsoni</a>
           <form class="d-flex" role="search">
-            <!-- <button type="button" class="btn btn-light">Registrarse</button> -->
+            <button type="button" class="btn btn-light">Registrarse</button>
           </form>
         </div>
     </nav>
@@ -79,6 +80,7 @@
             color: #545454;
             font-size: 18px;
         }
+        
         .seccion-perfil-usuario .perfil-usuario-bio{
             display: block;
             flex-wrap: wrap;
@@ -90,6 +92,7 @@
             margin: 70px;
             text-align: center;
 }
+ 
             .seccion-perfil-usuario .perfil-usuario-footer,
             .seccion-perfil-usuario .perfil-usuario-bio {
             display: flex;
@@ -112,9 +115,9 @@
 }
 
             .seccion-perfil-usuario .lista-datos li>.icono {
-    margin-right: 1rem;
-    font-size: 1.2rem;
-    vertical-align: middle;
+            margin-right: 1rem;
+            font-size: 1.2rem;
+            vertical-align: middle;
 }
             .seccion-perfil-usuario .perfil-usuario-body {
             width: 100%;
@@ -130,8 +133,18 @@
                 <div class="header">
                 <img class="avatar"
                 src="https://cdn-icons-png.flaticon.com/512/91/91528.png"height = "150">
+        
+                <br>
+                <br>
 
             </div>
+                <div class="row" class="center">
+                    <button type="button" class="btn btn-primary" style="background-color: #6200EE; color:white; width: 20%; margin-left: 50%;
+                    transform: translateX( -50%);">cambiar imagen</button>
+                </div>
+                
+        </button>    
+
             <div class="perfil-usuario-body">
                 <div class="perfil-usuario-bio">
                     <h3 class="titulo" style="width: 850px;">Nombre de usuario</h3>
@@ -143,15 +156,27 @@
 
                   <ul class="lista-datos">
                         <li><i class="icono fas fa-map-signs"></i> Direccion de usuario:</li>
+                        <input type="text" class="form-control"  id="Direccion de usuario">
                         <li><i class="icono fas fa-phone-alt"></i> Telefono:</li>
+                        <input type="text" class="form-control"  id="Telefono">
                         <li><i class="icono fas fa-briefcase"></i> Trabaja en:</li>
+                        <input type="text" class="form-control"  id="Trabaja en">
                         <li><i class="icono fas fa-building"></i> Cargo:</li>
+                        <input type="text" class="form-control"  id="Cargo">
                         <li><i class="icono fas fa-map-marker-alt"></i> Ubicacion:</li>
+                        <input type="text" class="form-control"  id="Ubicacion">
                         <li><i class="icono fas fa-calendar-alt"></i> Fecha nacimiento:</li>
+                        <input type="text" class="form-control"  id="Fecha de nacimiento">
                         <li><i class="icono fas fa-user-check"></i> Registro:</li>
+                        <input type="text" class="form-control"  id="Registro">
                         <li><i class="icono fas fa-share-alt"></i> Redes sociales:</li>
+                        <div class="row" class="center">
+                            <button type="button" class="btn btn-primary" style="background-color: #6200EE; color:white; width: 50%; margin-left: 50%;
+                            transform: translateX( 300%);">Insertar</button>
+                        </div>
                       </div>
                     </ul>
+                    
                   </div>
                 <div class="redes-sociales">
                     <a href="" class="boton-redes facebook fab fa-facebook-f"><i class="icon-facebook"></i></a>

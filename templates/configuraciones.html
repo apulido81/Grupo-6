@@ -5,22 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pantalla configuracion: Jorge</title>
-    <link rel="stylesheet" href="{{ url_for('static',filename='styles/estilos.css') }}">
+    <!-- <link rel="stylesheet" href="{{ url_for('static',filename='styles/estilos.css') }}"> -->
+    <link rel="stylesheet" href="../static/styles/estilos.css">
     <script src="https://kit.fontawesome.com/788f9a9fd8.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="{{ url_for('static',filename='styles/style.css') }}">
+    <!-- <link rel="stylesheet" href="{{ url_for('static',filename='styles/style.css') }}"> -->
+    <link rel="stylesheet" href="../static/styles/style.css">
 </head>
 <body>
-    <header class="header">
-        <nav class="nav">
-            <a href="#" class="logo">Social Pogona Henrylawsoni</a>
-            <ul class="nav-menu">
-                <li class="icono2">
-                    <img src="{{ url_for('static',filename='images/icono_persona.png') }}" class="iconos">
-                </li>
-                <li>
-                    <img src="{{ url_for('static',filename='images/icono_config.png') }}" class="iconos"> 
-                </li>
-            </ul>
+     <header class="header">
+        <nav id="header" class="navbar" style="background-color: #6200EE; display: flex;">
+            <div class="container-fluid">
+              <a class="navbar-brand" style="color: #fff;">Social Pogona Henrylawsoni</a>
+              <form class="d-flex" role="search">
+                <button type="button" class="btn btn-light">
+                    <!-- <img src="{{ url_for('static',filename='images/icono_persona.png') }}" alt="" style="width: 25px; margin: 0;border: 0; padding: 0;"> -->
+                    <img src="../static/images/icono_persona.png" alt="" style="width: 25px; margin: 0;border: 0; padding: 0;">
+                </button>
+                <button type="button" class="btn btn-light" style="margin-left: 15px;">
+                    <!-- <img src="{{ url_for('static',filename='images/icono_config.png') }}" class="iconos" style="width: 25px; margin: 0;border: 0; padding: 0;"> -->
+                    <img src="../static/images/icono_config.png" class="iconos" style="width: 25px; margin: 0;border: 0; padding: 0;">
+                </button>
+              </form>
+            </div>
         </nav>
     </header>
     <main>

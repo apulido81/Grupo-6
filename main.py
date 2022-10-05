@@ -1,19 +1,37 @@
 from unicodedata import name
-from flask import Flask, render_template
+from flask import Flask, render_template, request
+import sqlite3
 
 app = Flask(__name__)
 
-@app.route("/")
+@app.route("/", methods= "get")
 def principal():
-    return render_template("principal.html")
+    return render_template("index.html")
 
-@app.route("/login")
+@app.route("/login", methods="post")
 def login():
+    usuario = request.form["Usuario"]
+    contraseña1 = request.form["inputPassword"]
+    with sqlite3.connect("bdgrupo6.db") as con:
+        cur = con.cursor()
+        cur.execute("insert into login (usuario, password) values (?,?)", [usuario, contraseña1])
+        con.commit()
     return render_template("login.html")
 
 @app.route("/registrarse")
 def registro():
-    return render_template("registro.html")
+        correo = request.form["correo"]
+        nickname = request.form["nickname"]
+        edad = request.form["edad"]
+        user = request.form["user"]
+        contraseña = request.form["pass"]
+        respuesta = request.form["res pregunta seguridad"]
+        with sqlite3.connect("bdgrupo6.db") as con:
+            cur = con.cursor()
+        cur.execute("insert into login (correo, nickname, edad, user, pass,res pregunta seguridad ) values (?,?)",
+         [correo, nickname, edad, user,contraseña,respuesta])
+        con.commit()
+        return render_template("registro.html")
 
 @app.route("/login/perfil")
 def perfil():
@@ -53,3 +71,6 @@ def nuevoMensaje():
 
 if __name__ == "__main__":
     app.run()
+
+
+

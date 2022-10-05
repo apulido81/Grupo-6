@@ -1,46 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <style></style>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pantalla de informacion: Angela Pulido</title>
-    <link rel="stylesheet" href="{{ url_for('static',filename='styles/style.css') }}">
-</head>
-<body>
-    <header class="header">
-        <nav class="nav">
-            <a href="#" class="logo">Social Pogona Henrylawsoni</a>
-            <ul class="nav-menu">
-                <li class="icono2">
-                    <img src="{{ url_for('static',filename='images/icono_persona.png') }}" alt="" class="iconos">
-                </li>
-                <li>
-                    
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        
-        <br>
-        <div>
-            <img 
-                class="avatar"
-                src="https://www.ardiseny.es/wordpress/http://wp.ardiseny.es/wp-content/uploads/2016/06/duda-casa.jpg"height = "150">
-                <h1 class="user-name">Quienes somos?</h1>
-                <img 
-                class="avatar"
-                src="https://www.clinicalacolina.com/app/default/assets/images/contact.JPG"height = "150">
-                <h1 class="user-name">Contactanos</h1>
-                <img 
-                class="avatar"
-                src="https://s1.eestatic.com/2017/06/26/elandroidelibre/el_androide_libre_226740815_179989400_1024x576.jpg"height = "150">
-                <h1 class="user-name">Ubicacion</h1>
-        </div>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Pantalla de login: Angela Pulido </title>
+        <!-- <link rel="stylesheet" href="{{ url_for('static',filename='styles/logo.css') }}"> -->
+        <link rel="stylesheet" href="../static/styles/logo.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">   
+    </head>
+    <body>
+        <header>
+            <nav id="header" class="navbar" style="background-color: #6200EE;">
+                <div class="container-fluid">
+                <a class="navbar-brand">Social Pogona Henrylawsoni</a>
+                <form class="d-flex" role="search">
+                    <button type="button" class="btn btn-light">Registrarse</button>
+                </form>
+                </div>
+            </nav>
+        </header>
+        <div class="container" style= "height: 150; width: 2000px; align-items:50%; margin-top: 100px;">
+            <div class="card" style="margin-right: 50px;" >
+                <figure>
+                    <img src="https://www.ardiseny.es/wordpress/http://wp.ardiseny.es/wp-content/uploads/2016/06/duda-casa.jpg"height = "150" align-items="relative">
+                
+                <div class="contenido">
+                    <h3>Quienes somos</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod 
+                        tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <!-- <a href="#">Leer más</a> -->
+                        
+                </div>
+            </figure>
+            </div>
+            <br>
+            
+            <div class="card"  style="margin-right: 50px;">
+                <figure>
+                    <img src="https://www.clinicalacolina.com/app/default/assets/images/contact.JPG"height = "115" align-items="relative">
+                </figure>
+                <div class="contenido">
+                    <h3>Contactanos</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod 
+                        tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <!-- <a href="#">Leer más</a> -->
+                </div>
+            </div>
+            <div class="card">
+                <figure>
+                    <img src="https://s1.eestatic.com/2017/06/26/elandroidelibre/el_androide_libre_226740815_179989400_1024x576.jpg"height = "130"align-items="margin-right" >
+                </figure>
+                <br>
+                
+                <div class="contenido">
+                    <h3>Ubicacion</h3>  
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod 
+                        tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <!-- <a href="#">Leer más</a> -->
 
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. optio placeat dolorum blanditiis repudiandae error?
-    </main>
-</body>
-</html>
+                </div>
+            </div>
+        </div>
+    </body>
+    </html>
