@@ -17,14 +17,16 @@
             <tr class="nav-menu">
                 <td class="icono2">
                     <form id="btn" class="d-flex" role="search">
-                        <button type="button" class="btn btn-light" style = "margin-right: 20px"> 
-                            <!-- <img src="{{ url_for('static',filename='images/icono_persona.png') }}" alt="" class="iconos" style="width: 40%"> </button> -->
-                            <img src="../static/images/icono_persona.png" alt="" class="iconos" style="width: 40%"> </button>
-                        
-                        <button type="button" class="btn btn-light"> 
-                            <!-- <img src="{{ url_for('static',filename='images/icono_config.png') }}" class="iconos" style="width: 30%"> </button> -->
-                            <img src="../static/images/icono_config.png" class="iconos" style="width: 30%"> </button>
-                        
+                        <div>
+                            <a id="profile" href="perfil.html"><button type="button" class="btn btn-light" style = "margin-right: 20px"> 
+                                <!-- <img src="{{ url_for('static',filename='images/icono_persona.png') }}" class="iconos" style="width: 40%"> </button> -->
+                                <img src="../static/images/icono_persona.png" class="iconos" style="width: 40%"> </button></a>
+                        </div>
+                        <div>
+                            <a id="config" href="configuraciones.html"><button type="button" class="btn btn-light"> 
+                                <!-- <img src="{{ url_for('static',filename='images/icono_config.png') }}" alt="" class="iconos" style="width: 30%"> </button> -->
+                                <img src="../static/images/icono_config.png" alt="" class="iconos" style="width: 30%"> </button></a>
+                        </div>
                     </form>   
                 </td>
             </tr>
