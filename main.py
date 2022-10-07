@@ -4,11 +4,11 @@ import sqlite3
 
 app = Flask(__name__)
 
-@app.route("/", methods= "get")
+@app.route("/", methods= ["get"])
 def principal():
-    return render_template("index.html")
+    return render_template("registro.html")
 
-@app.route("/login", methods="post")
+@app.route("/login", methods=["post"])
 def login():
     usuario = request.form["Usuario"]
     contraseña1 = request.form["inputPassword"]
@@ -18,17 +18,17 @@ def login():
         con.commit()
     return render_template("login.html")
 
-@app.route("/registrarse")
+@app.route("/registrarse", methods=["post"])
 def registro():
         correo = request.form["correo"]
         nickname = request.form["nickname"]
         edad = request.form["edad"]
         user = request.form["user"]
         contraseña = request.form["pass"]
-        respuesta = request.form["res pregunta seguridad"]
+        respuesta = request.form["pregunta"]
         with sqlite3.connect("bdgrupo6.db") as con:
             cur = con.cursor()
-        cur.execute("insert into login (correo, nickname, edad, user, pass,res pregunta seguridad ) values (?,?)",
+        cur.execute("insert into login (correo, nickname, edad, user, pass, pregunta  ) values (?,?)",
          [correo, nickname, edad, user,contraseña,respuesta])
         con.commit()
         return render_template("registro.html")
@@ -70,7 +70,7 @@ def nuevoMensaje():
     return render_template("nuevo_mensaje.html")
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
 
 
 
