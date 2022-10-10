@@ -4,19 +4,22 @@ import sqlite3
 
 app = Flask(__name__)
 
+app.config['DEBUB'] = True
+
 @app.route("/", methods= ["get"])
 def principal():
     return render_template("registro.html")
 
-@app.route("/login", methods=["post"])
+@app.route("/login", methods=["post", "get"])
 def login():
-    usuario = request.form["Usuario"]
-    contraseña1 = request.form["inputPassword"]
-    with sqlite3.connect("bdgrupo6.db") as con:
-        cur = con.cursor()
-        cur.execute("insert into login (usuario, password) values (?,?)", [usuario, contraseña1])
-        con.commit()
-    return render_template("login.html")
+    if request.method == 'POST':
+        usuario = request.form["Usuario"]
+        contraseña1 = request.form["inputPassword"]
+        with sqlite3.connect("bdgrupo6.db") as con:
+            cur = con.cursor()
+            cur.execute("insert into login (usuario, password) values (?,?)", [usuario, contraseña1])
+            con.commit()
+        return render_template("login.html")
 
 @app.route("/registrarse", methods=["post"])
 def registro():
