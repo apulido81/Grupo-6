@@ -1,10 +1,16 @@
 from unicodedata import name
 from flask import Flask, render_template, request
 import sqlite3
+from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 
 app.config['DEBUB'] = True
+
+##CONNECT TO DB
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///bdgrupo6.db'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+db = SQLAlchemy(app)
 
 @app.route("/", methods= ["get"])
 def principal():
