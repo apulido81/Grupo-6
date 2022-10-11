@@ -25,7 +25,9 @@ def login():
             cur = con.cursor()
             cur.execute("insert into login (usuario, password) values (?,?)", [usuario, contraseña1])
             con.commit()
-        return render_template("login.html")
+        return render_template("index.html")
+    return render_template("login.html")
+
 
 @app.route("/registrarse", methods=["post"])
 def registro():
