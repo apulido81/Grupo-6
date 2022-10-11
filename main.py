@@ -8,7 +8,7 @@ app.config['DEBUB'] = True
 
 @app.route("/", methods= ["get"])
 def principal():
-    return render_template("index.html")
+    return render_template("login.html")
 
 @app.route("/login", methods=["post", "get"])
 def login():
