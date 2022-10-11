@@ -8,7 +8,7 @@ app.config['DEBUB'] = True
 
 @app.route("/", methods= ["get"])
 def principal():
-    return render_template("registro.html")
+    return render_template("index.html")
 
 @app.route("/login", methods=["post", "get"])
 def login():
@@ -34,7 +34,7 @@ def registro():
         cur.execute("insert into login (correo, nickname, edad, user, pass, pregunta  ) values (?,?)",
          [correo, nickname, edad, user,contraseña,respuesta])
         con.commit()
-        return render_template("registro.html")
+        return render_template("index.html")
 
 @app.route("/login/perfil")
 def perfil():
