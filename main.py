@@ -16,7 +16,11 @@ db = SQLAlchemy(app)
 def principal():
     return render_template("login.html")
 
-@app.route("/login", methods=["post", "get"])
+@app.route("/index", methods= ["GET", "POST"])
+def index():
+    return render_template("index.html")
+
+@app.route("/login", methods=["post"])
 def login():
     if request.method == 'POST':
         usuario = request.form["Usuario"]
@@ -38,7 +42,7 @@ def registro():
             respuesta = request.form["pregunta"]
             with sqlite3.connect("bdgrupo6.db") as con:
                 cur = con.cursor()
-            cur.execute("insert into login (correo, nickname, edad, user, pass, pregunta  ) values (?,?)",
+            cur.execute("insert into registro (correo, nickname, edad, usuario, password, pregunta ) values (?,?,?,?,?,?)",
             [correo, nickname, edad, user,contraseña,respuesta])
             con.commit()
             return render_template("registro.html")
@@ -48,29 +52,29 @@ def registro():
 
 @app.route("/login/perfil", methods=["GET"])
 def perfil():
-    return render_template("perfil.html", methods= ["GET"])
+    return render_template("perfil.html")
 
-@app.route("/login/perfil/configuraciones", methods= ["GET"])
+@app.route("/login/index/configuraciones", methods= ["GET"])
 def configuracion():
     return render_template("configuraciones.html")
 
-@app.route("/login/perfil/configuraciones/información", methods= ["GET"])
+@app.route("/login/perfil/configuraciones/informacion", methods= ["GET"])
 def información():
     return render_template("informacion.html")
     
 @app.route("/login/perfil/configuraciones/cambio-contraseña", methods= ["GET"])
 def cambioContrasena():
-    return render_template("cambio_contrasena.html", methods= ["GET"])
+    return render_template("cambio_contrasena.html")
 
 @app.route("/login/perfil/comentarios", methods= ["GET"])
 def comentarios():
     return render_template("comentarios.html")
 
-@app.route("/login/perfil/publicación", methods= ["GET"])
+@app.route("/login/perfil/publicacion", methods= ["GET", "POST"])
 def publicacion():
     return render_template("publicacion.html")
 
-@app.route("/login/perfil/publicación/subir-imagen", methods= ["GET"])
+@app.route("/index/subir-imagen", methods= ["GET"])
 def subirImagen():
     return render_template("subir_imagen.html")
 

@@ -18,11 +18,12 @@
             <div class="container-fluid">
               <a class="navbar-brand">Social Pogona Henrylawsoni</a>
               <form class="d-flex" role="search">
-                <button type="button" class="btn btn-light">
+                <button formmethod="get" type="button" class="btn btn-light" onclick="location.href='/login/perfil'">
                     <!-- <img src="{{ url_for('static',filename='images/icono_persona.png') }}" alt="" style="width: 25px; margin: 0;border: 0; padding: 0;"> -->
                     <img src="../static/images/icono_persona.png" alt="" style="width: 25px; margin: 0;border: 0; padding: 0;">
                 </button>
-                <button type="button" class="btn btn-light" style="margin-left: 15px;">
+                <button formmethod="get" type="button" class="btn btn-light" style="margin-left: 15px;" 
+                onclick="location.href='/login/index/configuraciones'">
                     <!-- <img src="{{ url_for('static',filename='images/icono_config.png') }}" class="iconos" style="width: 25px; margin: 0;border: 0; padding: 0;"> -->
                     <img src="../static/images/icono_config.png" class="iconos" style="width: 25px; margin: 0;border: 0; padding: 0;">
                 </button>
@@ -31,11 +32,24 @@
         </nav>
     </header>
     <div >
-        <button type="button" class="btn btn-outline-primary btn-lg" style="width: 600px; color: #6200EE; border-color: #6200EE; border-width: 5px; font-weight: bold; margin-top: 15%; margin-left: 15%;">SELECCIONE LA IMAGEN</button>
+        
+            <button type="text" class="btn btn-outline-primary btn-lg" style="width: 600px; color: #6200EE; border-color: #6200EE; border-width: 5px; font-weight: bold;
+            margin-top: 15%; margin-left: 15%;" onclick="document.getElementById('getFile').click()">SELECCIONE LA IMAGEN</button>
+            
+            <!-- <button type="text" class="btn btn-outline-primary btn-lg" style="width: 600px; color: #6200EE; border-color: #6200EE; border-width: 5px; font-weight: bold;
+            margin-top: 15%; margin-left: 15%;">SELECCIONE LA IMAGEN</button> -->
+    
+            <input type='file' id="getFile" style="display:none">
+            <!-- <input type="file"> -->
+            
     </div>
     <div style="margin-top: 15%; margin-left:54%;">
-        <button type="button" class="btn btn-outline-primary" style="margin-right: 35px; color: #6200EE; border-color: #6200EE;">CANCELAR</button>
-        <button class="btn btn-primary" type="submit" style="width:100px; color: #fff; background-color: #6200EE; ">SUBIR</button>
+        <form>
+            <button formaction="/index" formmethod="get" type="submit" class="btn btn-outline-primary" style="margin-right: 35px; color: #6200EE; 
+            border-color: #6200EE;">CANCELAR</button>
+            <button formaction="/login/perfil/publicacion" formmethod="post" class="btn btn-primary" type="submit" style="width:100px;
+             color: #fff; background-color: #6200EE; ">SUBIR</button>
+        </form>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
 </body>

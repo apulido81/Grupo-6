@@ -14,11 +14,15 @@
           <div class="container-fluid">
             <a class="navbar-brand">Social Pogona Henrylawsoni</a>
             <form class="d-flex" role="search">
-              <button type="button" class="btn btn-light">
+                <button formaction="/login/perfil/mensajes" formmethod="get" type="submit" class="btn btn-light">
+                    <!-- <img src="{{ url_for('static',filename='images/icono_persona.png') }}" alt="" style="width: 25px; margin: 0;border: 0; padding: 0;"> -->
+                    <img src="../static/images/icono_mensaje.jpg" alt="" style="width: 25px; margin: 0;border: 0; padding: 0;">
+                </button>
+              <button formaction="/login/perfil" formmethod="get" type="submit" class="btn btn-light" style="margin-left: 15px;"> 
                   <!-- <img src="{{ url_for('static',filename='images/icono_persona.png') }}" alt="" style="width: 25px; margin: 0;border: 0; padding: 0;"> -->
                   <img src="../static/images/icono_persona.png" alt="" style="width: 25px; margin: 0;border: 0; padding: 0;">
               </button>
-              <button type="button" class="btn btn-light" style="margin-left: 15px;">
+              <button formaction="/login/index/configuraciones" formmethod="get" type="submit" class="btn btn-light" style="margin-left: 15px;">
                   <!-- <img src="{{ url_for('static',filename='images/icono_config.png') }}" class="iconos" style="width: 25px; margin: 0;border: 0; padding: 0;"> -->
                   <img src="../static/images/icono_config.png" class="iconos" style="width: 25px; margin: 0;border: 0; padding: 0;">
               </button>
@@ -28,27 +32,29 @@
       </header>
     <main>
         <div>
-            <a id="newpost" href="subir_imagen.html" style= "color:#fff; text-decoration: none;" ><button type="button" class="btn btn-primary" style="background-color: #6200EE; width: 20%; margin-left: 15%;
-            transform: translateX(-40%) translateY(100%);">Nueva Publicación </button></a>
+            <form>
+                <button formaction="/index/subir-imagen" formmethod="get" type="submit" class="btn btn-primary" style="background-color: #6200EE; width: 20%; margin-left: 15%;
+                transform: translateX(-40%) translateY(100%);">Nueva Publicación </button>
+            </form>
         </div>
-    <div class="container" style="margin-top: 100px ;">
+    <div method="get" class="container" style="margin-top: 100px ;">
         <div class="card">
             <img src="../static/images/carrusel_2_2.jpg">
             <h4>jrodriguez25</h4>
             <p>¡Hora de la siesta!</p>
-            <a id="comment" href="comentarios.html" style= "color:black; text-decoration: none;" >Ver Publicación</a>
+            <a id="comment" href="/login/perfil/comentarios" style= "color:black; text-decoration: none;" >Ver Publicación</a>
         </div>
         <div class="card">
             <img src="../static/images/carrusel1.jpg">
             <h4>lsilva08</h4>
             <p>¿Como no amar a este par?</p>
-            <a id="comment" href="comentarios.html" style= "color:black; text-decoration: none;" >Ver Publicación</a>
+            <a id="comment" href="/login/perfil/comentarios" style= "color:black; text-decoration: none;" >Ver Publicación</a>
         </div>
         <div class="card">
             <img src="../static/images/carrusel2.jpg">
             <h4>acarcamo</h4>
             <p>Una foto asi como que no me doy cuenta</p>
-            <a id="comment" href="comentarios.html" style= "color:black; text-decoration: none;" >Ver Publicación</a>
+            <a id="comment" href="/login/perfil/comentarios" style= "color:black; text-decoration: none;" >Ver Publicación</a>
         </div>
 
     </div>
