@@ -12,7 +12,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///bdgrupo6.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
-@app.route("/", methods= ["get"])
+@app.route("/", methods= ["GET"])
 def principal():
     return render_template("login.html")
 
@@ -27,54 +27,58 @@ def login():
             con.commit()
         return render_template("login.html")
 
-@app.route("/registrarse", methods=["post"])
+@app.route("/registrarse", methods=["POST", "GET"])
 def registro():
-        correo = request.form["correo"]
-        nickname = request.form["nickname"]
-        edad = request.form["edad"]
-        user = request.form["user"]
-        contraseña = request.form["pass"]
-        respuesta = request.form["pregunta"]
-        with sqlite3.connect("bdgrupo6.db") as con:
-            cur = con.cursor()
-        cur.execute("insert into login (correo, nickname, edad, user, pass, pregunta  ) values (?,?)",
-         [correo, nickname, edad, user,contraseña,respuesta])
-        con.commit()
-        return render_template("index.html")
+        if request.method == 'POST':
+            correo = request.form["correo"]
+            nickname = request.form["nickname"]
+            edad = request.form["edad"]
+            user = request.form["user"]
+            contraseña = request.form["pass"]
+            respuesta = request.form["pregunta"]
+            with sqlite3.connect("bdgrupo6.db") as con:
+                cur = con.cursor()
+            cur.execute("insert into login (correo, nickname, edad, user, pass, pregunta  ) values (?,?)",
+            [correo, nickname, edad, user,contraseña,respuesta])
+            con.commit()
+            return render_template("registro.html")
+        else:
+            return render_template("registro.html")
 
-@app.route("/login/perfil")
+
+@app.route("/login/perfil", methods=["GET"])
 def perfil():
-    return render_template("perfil.html")
+    return render_template("perfil.html", methods= ["GET"])
 
-@app.route("/login/perfil/configuraciones")
+@app.route("/login/perfil/configuraciones", methods= ["GET"])
 def configuracion():
     return render_template("configuraciones.html")
 
-@app.route("/login/perfil/configuraciones/información")
+@app.route("/login/perfil/configuraciones/información", methods= ["GET"])
 def información():
     return render_template("informacion.html")
     
-@app.route("/login/perfil/configuraciones/cambio-contraseña")
+@app.route("/login/perfil/configuraciones/cambio-contraseña", methods= ["GET"])
 def cambioContrasena():
-    return render_template("cambio_contrasena.html")
+    return render_template("cambio_contrasena.html", methods= ["GET"])
 
-@app.route("/login/perfil/comentarios")
+@app.route("/login/perfil/comentarios", methods= ["GET"])
 def comentarios():
     return render_template("comentarios.html")
 
-@app.route("/login/perfil/publicación")
+@app.route("/login/perfil/publicación", methods= ["GET"])
 def publicacion():
     return render_template("publicacion.html")
 
-@app.route("/login/perfil/publicación/subir-imagen")
+@app.route("/login/perfil/publicación/subir-imagen", methods= ["GET"])
 def subirImagen():
     return render_template("subir_imagen.html")
 
-@app.route("/login/perfil/mensajes")
+@app.route("/login/perfil/mensajes", methods= ["GET"])
 def mensajes():
     return render_template("mensajes.html")
 
-@app.route("/login/perfil/mensajes/nuevo-mensaje")
+@app.route("/login/perfil/mensajes/nuevo-mensaje", methods= ["GET"])
 def nuevoMensaje():
     return render_template("nuevo_mensaje.html")
 
