@@ -21,13 +21,9 @@
             <div class="container-fluid">
               <a class="navbar-brand" style="color: #fff;">Social Pogona Henrylawsoni</a>
               <form class="d-flex" role="search">
-                <button type="button" class="btn btn-light">
+                <button formaction="/login/perfil" formmethod="get" type="submit" class="btn btn-light">
                     <img src="{{ url_for('static',filename='images/icono_persona.png') }}" alt="" style="width: 25px; margin: 0;border: 0; padding: 0;">
                     <!-- <img src="../static/images/icono_persona.png" alt="" style="width: 25px; margin: 0;border: 0; padding: 0;"> -->
-                </button>
-                <button type="button" class="btn btn-light" style="margin-left: 15px;">
-                    <img src="{{ url_for('static',filename='images/icono_config.png') }}" class="iconos" style="width: 25px; margin: 0;border: 0; padding: 0;">
-                    <!-- <img src="../static/images/icono_config.png" class="iconos" style="width: 25px; margin: 0;border: 0; padding: 0;"> -->
                 </button>
               </form>
             </div>
@@ -36,23 +32,21 @@
     <main>
         <form class="formulario">
           
-    
             <h1>  <i class="fa-solid fa-gear"></i></i>Configuraciones</h1>
              <div class="contenedor">
              
             
                  <div class="input-contenedor">
                 
-                 <input type="submit" value="Cambio de contraseña" class="button">
+                    <input formaction="/login/perfil/configuraciones/cambio-contraseña" formmethod="get" type="submit" value="Cambio de contraseña" class="button">
                  
                  </div>
                  
                  <div class="input-contenedor">
                     
-                    <input type="submit" value="informacion" class="button">
+                    <input formaction="/login/perfil/configuraciones/informacion" formmethod="get" type="submit" value="Informacion" class="button">
                      
-                     </div>
-                 
+                </div>           
                  
             </form>
     </main>

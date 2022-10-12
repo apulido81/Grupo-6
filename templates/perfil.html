@@ -21,11 +21,7 @@
             <div class="container-fluid">
               <a class="navbar-brand">Social Pogona Henrylawsoni</a>
               <form class="d-flex" role="search">
-                <button type="button" class="btn btn-light">
-                    <img src="{{ url_for('static',filename='images/icono_persona.png') }}" alt="" style="width: 25px; margin: 0;border: 0; padding: 0;">
-                    <!-- <img src="../static/images/icono_persona.png" alt="" style="width: 25px; margin: 0;border: 0; padding: 0;"> -->
-                </button>
-                <button type="button" class="btn btn-light" style="margin-left: 15px;">
+                <button formaction="/login/index/configuraciones" formmethod="get" type="submit" class="btn btn-light" style="margin-left: 15px;">
                     <img src="{{ url_for('static',filename='images/icono_config.png') }}" class="iconos" style="width: 25px; margin: 0;border: 0; padding: 0;">
                     <!-- <img src="../static/images/icono_config.png" class="iconos" style="width: 25px; margin: 0;border: 0; padding: 0;"> -->
                 </button>
