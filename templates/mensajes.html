@@ -5,9 +5,10 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Mensajes</title>
-        <!-- <link rel="{{ url_for('static',filename='styles/mensaje.css') }}"> -->
-        <link rel="../static/mensaje.css">
-        <link rel="stylesheet" href="../static/styles/logo.css">
+        <link rel="{{ url_for('static',filename='styles/logo.css') }}">
+        <link rel="{{ url_for('static',filename='styles/mensaje.css') }}">
+        <!-- <link rel="../static/mensaje.css"> -->
+        <!-- <link rel="stylesheet" href="../static/styles/logo.css"> -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     </head>
 <body>
@@ -16,13 +17,13 @@
             <div class="container-fluid">
               <a class="navbar-brand">Social Pogona Henrylawsoni</a>
               <form class="d-flex" role="search">
-                <button type="button" class="btn btn-light">
-                    <!-- <img src="{{ url_for('static',filename='images/icono_persona.png') }}" alt="" style="width: 25px; margin: 0;border: 0; padding: 0;"> -->
-                    <img src="../static/images/icono_persona.png" alt="" style="width: 25px; margin: 0;border: 0; padding: 0;">
+                <button formaction="/login/perfil" formmethod="get" type="submit" class="btn btn-light">
+                    <img src="{{ url_for('static',filename='images/icono_persona.png') }}" alt="" style="width: 25px; margin: 0;border: 0; padding: 0;">
+                    <!-- <img src="../static/images/icono_persona.png" alt="" style="width: 25px; margin: 0;border: 0; padding: 0;"> -->
                 </button>
-                <button type="button" class="btn btn-light" style="margin-left: 15px;">
-                    <!-- <img src="{{ url_for('static',filename='images/icono_config.png') }}" class="iconos" style="width: 25px; margin: 0;border: 0; padding: 0;"> -->
-                    <img src="../static/images/icono_config.png" class="iconos" style="width: 25px; margin: 0;border: 0; padding: 0;">
+                <button formaction="/login/index/configuraciones" formmethod="get" type="submit" class="btn btn-light" style="margin-left: 15px;">
+                    <img src="{{ url_for('static',filename='images/icono_config.png') }}" class="iconos" style="width: 25px; margin: 0;border: 0; padding: 0;">
+                    <!-- <img src="../static/images/icono_config.png" class="iconos" style="width: 25px; margin: 0;border: 0; padding: 0;"> -->
                 </button>
               </form>
             </div>
@@ -30,15 +31,19 @@
     </header>
     <main>
         <div>
-            <a id="newmsg" href="nuevo_mensaje.html" style= "color:#fff; text-decoration: none;" ><button type="button" class="btn btn-primary" style="background-color: #6200EE; width: 20%; margin-left: 15%;
-            transform: translateX(-40%) translateY(100%);">Nuevo Mensaje </button></a>
+            <form>
+                <!-- <a id="newmsg" href="nuevo_mensaje.html" style= "color:#fff; text-decoration: none;" > -->
+                    <button formaction="/login/perfil/mensajes/nuevo-mensaje" formmethod="get" type="submit" class="btn btn-primary" style="background-color: #6200EE; width: 20%; margin-left: 15%;
+                    transform: translateX(-40%) translateY(100%);">Nuevo Mensaje </button>
+                <!-- </a> -->
+            </form>
         </div>
     <form id="newmsg" class="msginbox" style="margin-left: 20%; width: 600px; ">
         <div class="card mb-3" style="margin-top: 100px;">
             <div class="row g-0">
                 <div class="col-md-4">
-                <!-- <img src="{{ url_for('static',filename='images/carrusel2.jpg') }}" class="img-fluid rounded-start" alt="..."> -->
-                <img src="../static/images/carrusel2.jpg" class="img-fluid rounded-start" alt="...">
+                <img src="{{ url_for('static',filename='images/carrusel2.jpg') }}" class="img-fluid rounded-start" alt="...">
+                <!-- <img src="../static/images/carrusel2.jpg" class="img-fluid rounded-start" alt="..."> -->
                 </div>
                 <div class="col-md-8">
                 <div class="card-body">
@@ -53,8 +58,8 @@
         <div class="card mb-3" style="margin-top: 30px;">
             <div class="row g-0">
                 <div class="col-md-4">
-                <!-- <img src="{{ url_for('static',filename='images/carrusel1.jpg') }}" class="img-fluid rounded-start" alt="..."> -->
-                <img src="../static/images/carrusel1.jpg" class="img-fluid rounded-start" alt="...">
+                <img src="{{ url_for('static',filename='images/carrusel1.jpg') }}" class="img-fluid rounded-start" alt="...">
+                <!-- <img src="../static/images/carrusel1.jpg" class="img-fluid rounded-start" alt="..."> -->
                 </div>
                 <div class="col-md-8">
                 <div class="card-body">
@@ -68,8 +73,8 @@
             <div class="card mb-3" style="margin-top: 30px;">
             <div class="row g-0">
                 <div class="col-md-4">
-                <!-- <img src="{{ url_for('static',filename='images/carrusel_2_2.jpg') }}" class="img-fluid rounded-start" alt="..."> -->
-                <img src="../static/images/carrusel_2_2.jpg" class="img-fluid rounded-start" alt="...">
+                <img src="{{ url_for('static',filename='images/carrusel_2_2.jpg') }}" class="img-fluid rounded-start" alt="...">
+                <!-- <img src="../static/images/carrusel_2_2.jpg" class="img-fluid rounded-start" alt="..."> -->
                 </div>
                 <div class="col-md-8">
                 <div class="card-body">
@@ -83,8 +88,8 @@
             <div class="card mb-3" style="margin-top: 30px;">
             <div class="row g-0">
                 <div class="col-md-4">
-                <!-- <img src="{{ url_for('static',filename='images/carrusel_2_1.jpg') }}" class="img-fluid rounded-start" alt="..."> -->
-                <img src="../static/images/carrusel_2_1.jpg" class="img-fluid rounded-start" alt="...">
+                <img src="{{ url_for('static',filename='images/carrusel_2_1.jpg') }}" class="img-fluid rounded-start" alt="...">
+                <!-- <img src="../static/images/carrusel_2_1.jpg" class="img-fluid rounded-start" alt="..."> -->
                 </div>
                 <div class="col-md-8">
                 <div class="card-body">
